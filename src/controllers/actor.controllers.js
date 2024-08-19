@@ -28,7 +28,7 @@ const Destroy = catchError(async(req, res) => {
     if(!result) return res.json({
         data:`User ${ id } not found`
     })
-    return res.json(result)
+    return res.sendStatus(204)
 });
 
 const Update = catchError(async(req, res) => {

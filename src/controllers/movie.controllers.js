@@ -42,6 +42,7 @@ const update = catchError(async(req, res) => {
 
 const setGenres= catchError(async(req, res)=>{
     const {id }=req.params
+    console.log("entro al controller")
     const movie = await Movies.findByPk(id)
     await movie.setGenres(req.body)
     const genre = await movie.getGenres()
